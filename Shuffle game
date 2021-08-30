@@ -1,0 +1,155 @@
+Public Class Form1
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        shuffle()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        ' Button 2,5
+        CheckButton(Button1, Button2)
+        CheckButton(Button1, Button5)
+        CheckSolve()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        '1,3,6
+        CheckButton(Button2, Button1)
+        CheckButton(Button2, Button3)
+        CheckButton(Button2, Button6)
+        CheckSolve()
+    End Sub
+
+    Private Sub Button3_Click1(sender As Object, e As EventArgs) Handles Button3.Click
+        '2,7,4
+        CheckButton(Button3, Button2)
+        CheckButton(Button3, Button7)
+        CheckButton(Button3, Button4)
+        CheckSolve()
+
+
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        '3,8
+        CheckButton(Button4, Button3)
+        CheckButton(Button4, Button8)
+        CheckSolve()
+    End Sub
+
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        '7,10,12,15
+        CheckButton(Button11, Button7)
+        CheckButton(Button11, Button10)
+        CheckButton(Button11, Button12)
+        CheckButton(Button11, Button15)
+        CheckSolve()
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        '1,6,9
+        CheckButton(Button5, Button1)
+        CheckButton(Button5, Button6)
+        CheckButton(Button5, Button9)
+        CheckSolve()
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        '7,10,15,12
+        CheckButton(Button6, Button7)
+        CheckButton(Button6, Button10)
+        CheckButton(Button6, Button15)
+        CheckButton(Button6, Button12)
+        CheckSolve()
+
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        '3,6,8,11
+        CheckButton(Button7, Button3)
+        CheckButton(Button7, Button6)
+        CheckButton(Button7, Button8)
+        CheckButton(Button7, Button11)
+        CheckSolve()
+
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        '4,7,12
+        CheckButton(Button8, Button4)
+        CheckButton(Button8, Button7)
+        CheckButton(Button8, Button12)
+        CheckSolve()
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        '5,10,13
+        CheckButton(Button9, Button5)
+        CheckButton(Button9, Button10)
+        CheckButton(Button9, Button13)
+        CheckSolve()
+    End Sub
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        '6,9,11,14
+        CheckButton(Button10, Button6)
+        CheckButton(Button10, Button9)
+        CheckButton(Button10, Button11)
+        CheckButton(Button10, Button14)
+        CheckSolve()
+    End Sub
+
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+        '8,11,16
+        CheckButton(Button12, Button8)
+        CheckButton(Button12, Button11)
+        CheckButton(Button12, Button16)
+        CheckSolve()
+    End Sub
+
+    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
+        '9,14
+        CheckButton(Button13, Button9)
+        CheckButton(Button13, Button14)
+        CheckSolve()
+
+    End Sub
+
+    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
+        '13,10,15
+        CheckButton(Button14, Button13)
+        CheckButton(Button14, Button10)
+        CheckButton(Button14, Button15)
+        CheckSolve()
+    End Sub
+
+    Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
+        '14,11,16
+        CheckButton(Button15, Button14)
+        CheckButton(Button15, Button11)
+        CheckButton(Button15, Button16)
+        CheckSolve()
+    End Sub
+
+    Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
+        '12,15
+        CheckButton(Button16, Button12)
+        CheckButton(Button16, Button15)
+        CheckSolve()
+
+    End Sub
+
+    Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
+        Me.Close()
+
+    End Sub
+
+    Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Dim x = MsgBox("Do you want to Exit ?", vbYesNo + vbQuestion)
+        If (x = Windows.Forms.DialogResult.No) Then
+            e.Cancel = True
+        End If
+    End Sub
+
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+        shuffle()
+    End Sub
+End Class
